@@ -1,3 +1,4 @@
+<div style="text-align:left>
 # 📜 Project Setup & Linting Configurations
 
 ## 🛠️ ESLint Setup for React Hooks
@@ -17,3 +18,5 @@ The plugin will treat issues like **unused variables** as errors. To prevent the
 ```json
 "@typescript-eslint/no-unused-vars": ["warn"]
 ```
+
+</div>

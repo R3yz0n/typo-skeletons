@@ -1,50 +1,19 @@
-# React + TypeScript + Vite
+# 📜 Project Setup & Linting Configurations
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🛠️ ESLint Setup for React Hooks
 
-Currently, two official plugins are available:
+This project uses the **`eslint-plugin-react-hooks`** package to enforce best practices and prevent common issues when working with React Hooks. The plugin has been added to the Vite development server configuration to ensure that any issues with hook usage are immediately visible during development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ⚡️ Runtime Error Reporting
 
-## Expanding the ESLint configuration
+In the `vite.config.ts` file, the ESLint plugin is included in the `plugins` array. This means that **errors and warnings** related to React hooks will be shown in real time in the browser console during development. 🖥️
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#### 🚨 Key Configuration
 
-- Configure the top-level `parserOptions` property like this:
+The plugin will treat issues like **unused variables** as errors. To prevent the dev server from treating unused variables as errors, follow these steps:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Modify ESLint Rules**: To make unused variable warnings less strict, update the rule in your `.eslintrc.js` or `.eslintrc.json` file:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```json
+"@typescript-eslint/no-unused-vars": ["warn"]
 ```

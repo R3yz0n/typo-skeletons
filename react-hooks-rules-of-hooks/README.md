@@ -1,4 +1,4 @@
-<div style="text-align: left">
+<div style="text-align: left;">
 # 📜 Project Setup & Linting Configurations
 
 ## 🛠️ ESLint Setup for React Hooks

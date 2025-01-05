@@ -2,7 +2,7 @@
 
 ## 🛠️ ESLint Setup for React Hooks
 
-This project uses the **`eslint-plugin-react-hooks`** package to enforce best practices and prevent common issues when working with React Hooks. The plugin has been added to the Vite development server configuration to ensure that any issues with hook usage are immediately visible during development.
+This project uses the **`eslint-plugin-react-hooks`** &**`vite-plugin-eslint`** package to enforce best practices and prevent common issues when working with React Hooks. The plugin has been added to the Vite development server configuration to ensure that any issues with hook usage are immediately visible during development.
 
 ### ⚡️ Runtime Error Reporting
 

@@ -1,5 +1,6 @@
 <div style="text-align: left;">
 # 📜 Project Setup & Linting Configurations
+[Setup ESLint and Prettier for React Project with TypeScript](https://yogendrakumarvr.com/post/setup-eslint-and-prettier-for-react-project-with-typescript)
 
 ## 🛠️ ESLint Setup for React Hooks
 
